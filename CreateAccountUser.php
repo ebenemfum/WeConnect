@@ -34,10 +34,12 @@
 
             <!-- user input for registeration -->
     
-            <form id="register" class="input-group" method = "POST">
-                <input type="text" name = "user_id" id="user_id" class="input-field" placeholder="User Id" required>
+            <form id="register" class="input-group" method = "POST">    
+                <input type="text" name="first_name" id="first_name" class="input-field" placeholder="first name" required>
+                <input type="text" name="last_name" id="last_name" class="input-field" placeholder="last name" required>
+                <input type="text" name = "user_name" id="user_name" class="input-field" placeholder="User Name" required>
                 <input type="email" name ="email" id="email" class="input-field" placeholder="Email" required>
-                <input type="text" name="password" id="password" class="input-field" placeholder="Enter Password" required>
+                <input type="password" name="password" id="password" class="input-field" placeholder="Enter Password" required>
                 <!--<div><input type="checkbox" class="checkbox"><span> Remember Password</span></div>-->
                 <button type="submit" name="submit_btn" class="submit-btn">Register</button>
             </form>  
@@ -65,30 +67,7 @@
     }
 </script>
 
-<?php
-    if(isset($_POST['submit'])){
-        $uname = $_POST['user_id'];
-        $password = $_POST['user_password'];
 
-        // verfying the log in details to see if they match 
-        $sql = "select * from ITSpecialist where SpecialistID ='".$uname. "'AND Specialist_password ='".$password."'limit 1";
-        $result = (mysqli_query($conn,$sql));
-
-        if(mysqli_num_rows($result) > 0){
-            header("location: " )
-        }
-    }
-
-    if(isset($_POST['submit_btn'])){
-        $uname = $_POST['user_id'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        mysqli_query($conn,"insert into ")
-
-
-    }
-?>
 
 
 
