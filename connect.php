@@ -1,6 +1,6 @@
 <?php
 
-$svrname = "localhost":
+$svrname = "localhost";
 $uname = "root";
 $pswd = "Phantom0812";
 $db = "SoftEngDbs";
