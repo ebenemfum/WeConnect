@@ -31,7 +31,6 @@ foreign key (CustomerID) references
 Person(personID) on update cascade on delete restrict
 );
 
-
 create table Administrator(
 AdministratorID int unsigned primary key,
 Administrator_email varchar(50),
